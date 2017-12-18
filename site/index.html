@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <!--
+    This is the library that provides websocket streaming pub/sub
+    The dev serverver is serving the html and javascript, but it also provides updating fx data on /fx/prices.
+     -->
+    <script src="stomp.js"></script>
+    <script src="sparkline.js"></script>
+    <!--
+    This will update the grid based on the data 
+    This is view which renders the data which it receives from bidDataUpdates model which is described below
+     -->
+    <script src="bidDataUpdates.js"></script>
+    <!--
+    This is the modal which takes data from /fx/prices 
+     -->
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <!-- This is a description of what you should do for this task.  You can remove it for your answer -->
+    <section class="content">
+        <h2>Real Time Bid Updates</h2>
+        <div id="tableDiv"></div>
+        </br>
+        <section id="stomp-status"></section>
+        <p><b>Implementation description : </b>As we are getting data continuosly from server, therefore I am checking data
+            after every 5s and updating the table after sorting the data. We have to display the 30 seconds data in a sparkline,
+            so Sparkline will appear after 30 seconds. I have used plain javascript.
+            </br>
+            <!-- <b>My Contact details</b></br>
+            Name : Ankita Raj</br>
+            Contact : 7888040375</br>
+            Mail : ankita-ra@hcl.com
+            -->
+        </p>
+    </section>
+
+    <!-- Code you write in index.js and anything it depends on will be bundled into bundle.js and
+     is included here -->
+    <script src="bundle.js"></script>
+
+</body>
+
+</html>
